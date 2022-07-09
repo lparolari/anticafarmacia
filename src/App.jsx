@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
+
 import { Route, Routes } from 'react-router-dom'
 
 import { Contacts } from './routes/Contacts/Contacts'

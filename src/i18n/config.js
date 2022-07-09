@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
@@ -8,7 +9,7 @@ import it from './it.json'
 export const resources = {
   it: { translation: it },
   en: { translation: en },
-} as const
+}
 
 const detectionOptions = {
   order: ['localStorage'],

@@ -44,7 +44,7 @@ const Banner = () => {
                   <FilledBtnLink
                     to={locations.rooms}
                     label={t('Prices')}
-                    muted={t('From {{ price }}', {
+                    muted={t('From {{ price }}€', {
                       price: home.banner.fromPrice,
                     })}
                   />
