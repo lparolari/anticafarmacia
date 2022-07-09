@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next'
 import Footer from '../../components/Footer/Footer'
 import { Header } from '../../components/Header/Header'
 import Banner from './Banner'
+import Cta from './Cta'
 import RoomType from './RoomType'
 
 export const Home = () => {
@@ -25,8 +26,8 @@ export const Home = () => {
       <Header />
       <Banner />
       <RoomType />
+      <Cta />
       {/* 
-      <Cta {...cta} />
       <About {...about} />
       <DiscoverUs {...discoverUs} /> */}
       <Footer />
