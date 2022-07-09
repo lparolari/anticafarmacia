@@ -7,7 +7,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-shadow */
 import classNames from 'classnames'
+import i18next from 'i18next'
 import React from 'react'
+import ReactCountryFlag from 'react-country-flag'
 import { Link } from 'react-router-dom'
 
 import logo from '../../assets/images/logo.png'
@@ -127,7 +129,6 @@ export const Header = ({
                   <span className="bottom" />
                 </div>
               </div>
-
               {/* DISABLED */}
               {/*
               <div className="toggle" onClick={toggleCanvas}>
@@ -136,7 +137,6 @@ export const Header = ({
                 </Link>
               </div>
               */}
-
               <div className="menu-items">
                 <ul>
                   {navigationmenu.length > 0
@@ -198,12 +198,13 @@ export const Header = ({
                     : null}
                 </ul>
               </div>
-
               <div className="nav-pushed-item">
                 <SideInfo {...global.contacts} />
               </div>
+              <div style={{ margin: '1rem', marginTop: '2rem' }}>
+                {isMobile && <SelectLanguage />}
+              </div>
             </div>
-
             <div className="site-logo">
               <Link to="/">
                 <img
@@ -222,7 +223,6 @@ export const Header = ({
                 whatsapp={global.contacts.whatsapp}
               />
             </div>
-
             <div
               className={classNames('navbar-toggler', {
                 active: navMethod,
@@ -259,6 +259,31 @@ export const Header = ({
   )
 }
 
+const SelectLanguage = ({ vertical }) => (
+  <div style={{ display: 'flex', flexDirection: vertical ? 'column' : 'row' }}>
+    <div style={vertical ? {} : { marginRight: '0.5rem' }}>
+      <ReactCountryFlag
+        countryCode="GB"
+        style={{
+          fontSize: '1.5rem',
+          cursor: 'pointer',
+        }}
+        onClick={() => i18next.changeLanguage('en')}
+      />
+    </div>
+    <div>
+      <ReactCountryFlag
+        countryCode="IT"
+        style={{
+          fontSize: '1.5rem',
+          cursor: 'pointer',
+        }}
+        onClick={() => i18next.changeLanguage('it')}
+      />
+    </div>
+  </div>
+)
+
 const HeaderInfo = ({ mobile, whatsapp }) => (
   <div className="header-info d-lg-flex align-items-center">
     <div className="item">
@@ -270,6 +295,9 @@ const HeaderInfo = ({ mobile, whatsapp }) => (
       <a href={whatsapp.href} className="main-btn btn-filled">
         whatsapp
       </a>
+    </div>
+    <div className="item">
+      <SelectLanguage vertical />
     </div>
   </div>
 )
