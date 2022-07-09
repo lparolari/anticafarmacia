@@ -54,6 +54,7 @@ const Banner = () => {
                     to={global.contacts.whatsapp.href}
                     label={t('Book now')}
                     muted={t('With whatsapp')}
+                    external
                   />
                 </li>
               </ul>

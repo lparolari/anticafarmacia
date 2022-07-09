@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable consistent-return */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
@@ -199,8 +200,7 @@ export const Header = ({
               </div>
 
               <div className="nav-pushed-item">
-                {/* TODO */}
-                {/* <SideInfo {...global.contacts} /> */}
+                <SideInfo {...global.contacts} />
               </div>
             </div>
 
