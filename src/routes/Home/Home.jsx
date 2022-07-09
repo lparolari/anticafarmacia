@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next'
 
 import Footer from '../../components/Footer/Footer'
 import { Header } from '../../components/Header/Header'
+import Banner from './Banner'
 
 export const Home = () => {
   const { t } = useTranslation()
@@ -21,7 +22,11 @@ export const Home = () => {
     <>
       {t('Foo')}
       <Header />
-      {/* <Content /> */}
+      <Banner />
+      {/* <RoomType {...roomOverview} />
+      <Cta {...cta} />
+      <About {...about} />
+      <DiscoverUs {...discoverUs} /> */}
       <Footer />
     </>
   )
