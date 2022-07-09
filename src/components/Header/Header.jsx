@@ -10,36 +10,13 @@ import classNames from 'classnames'
 import i18next from 'i18next'
 import React from 'react'
 import ReactCountryFlag from 'react-country-flag'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import logo from '../../assets/images/logo.png'
 import { global } from '../../data/global'
+import { locations } from '../../utils/locations'
 import Canvas from './Canvas'
-
-// import { graphql, Link, useStaticQuery } from 'gatsby'
-// import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-// import navigationmenu from '../../data/navigation.json'
-
-const navigationmenu = [
-  {
-    id: 1,
-    link: '/',
-    linkText: 'Home',
-    child: false,
-  },
-  {
-    id: 2,
-    link: '/rooms',
-    linkText: 'Camere',
-    child: false,
-  },
-  {
-    id: 4,
-    link: '/contact',
-    linkText: 'Contatti',
-    child: false,
-  },
-]
 
 // Mobile menu
 const getNextSibling = (elem, selector) => {
@@ -71,6 +48,29 @@ const triggerChild = (e) => {
 export const Header = ({
   settings: { alwaysStiky } = { alwaysStiky: true },
 }) => {
+  const { t } = useTranslation()
+
+  const navigationmenu = [
+    {
+      id: 1,
+      link: locations.home,
+      linkText: t('Home'),
+      child: false,
+    },
+    {
+      id: 2,
+      link: locations.rooms,
+      linkText: t('Rooms'),
+      child: false,
+    },
+    {
+      id: 4,
+      link: locations.contacts,
+      linkText: t('Contacts'),
+      child: false,
+    },
+  ]
+
   const [navMethod, setNavMethod] = React.useState(false)
   const [canvasMethod, setCanvasMethod] = React.useState(false)
   const [searchMethod, setSearchMethod] = React.useState(false)
@@ -288,7 +288,7 @@ const HeaderInfo = ({ mobile, whatsapp }) => (
   <div className="header-info d-lg-flex align-items-center">
     <div className="item">
       <a href={mobile.href} className="main-btn bnt-border">
-        chiama
+        {i18next.t('Call us')}
       </a>
     </div>
     <div className="item">

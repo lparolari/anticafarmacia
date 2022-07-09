@@ -1,24 +1,27 @@
 /* eslint-disable react/no-array-index-key */
+import i18next from 'i18next'
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
+
+import { locations } from '../../utils/locations'
 
 const navigationmenu = [
   {
     id: 1,
-    link: '/',
-    linkText: 'Home',
+    link: locations.home,
+    linkText: i18next.t('Home'),
     child: false,
   },
   {
     id: 2,
-    link: '/rooms',
-    linkText: 'Camere',
+    link: locations.rooms,
+    linkText: i18next.t('Rooms'),
     child: false,
   },
   {
     id: 4,
-    link: '/contact',
-    linkText: 'Contatti',
+    link: locations.contacts,
+    linkText: i18next.t('Contacts'),
     child: false,
   },
 ]
