@@ -29,13 +29,16 @@ export const Footer = () => {
                 <p>
                   <Link to={locations.rooms}>{t('Rooms')}</Link>
                 </p>
+                <p>
+                  <Link to={locations.contacts}>{t('Contacts')}</Link>
+                </p>
                 {/* <p>
                   <Link to="#" onClick={() => window.open("/privacy-policy.pdf")}>Privacy Policy</Link>
                 </p> */}
               </div>
               <div className="col-md-3">
                 <div className="">
-                  <p className="copyright-text">Legali</p>
+                  <p className="copyright-text">{t('Legal info')}</p>
                   <p className="text-muted fiscal">
                     <i className="fas fa-stamp" /> {fiscal.businessName}
                   </p>
