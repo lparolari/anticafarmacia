@@ -1,8 +1,10 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
 
 import dinnerRoom from '../../assets/images/dinner-room-2.jpg'
+import { BorderBtnLink, FilledBtnLink } from '../../components/Button/Button'
+import { global } from '../../data/global'
+import { locations } from '../../utils/locations'
 
 export const DiscoverUs = () => {
   const { t } = useTranslation()
@@ -29,14 +31,19 @@ export const DiscoverUs = () => {
                 </h2>
                 <ul className="mt-50">
                   <li>
-                    <Link className="main-btn btn-filled" to="/rooms">
-                      {t('Discover our rooms')}
-                    </Link>
+                    <FilledBtnLink
+                      to={locations.rooms}
+                      label={t('Discover')}
+                      muted={t('Our rooms')}
+                    />
                   </li>
                   <li>
-                    <Link className="main-btn btn-border" to="/contact">
-                      {t('Contact us')}
-                    </Link>
+                    <BorderBtnLink
+                      to={global.contacts.whatsapp.href}
+                      label={t('Contact us')}
+                      muted={t('With whatsapp')}
+                      external
+                    />
                   </li>
                 </ul>
               </div>

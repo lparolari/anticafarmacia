@@ -176,9 +176,7 @@
       }
 
       @media #{$tiny} {
-        padding: 0 15px;
-        letter-spacing: 1px;
-        font-size: 12px;
+        margin-top: 10px;
       }
 
       &.btn-filled,
@@ -223,8 +221,6 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 3px;
-      padding-bottom: 20px;
-      color: $primary-color;
     }
   }
 
