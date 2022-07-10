@@ -8,7 +8,9 @@ const ButtonLink = ({ to, label, muted, className, external }) => {
       {muted && (
         <>
           <br />
-          <span className="muted">{muted}</span>
+          <span className="muted" style={{ display: 'inline-block' }}>
+            {muted}
+          </span>
         </>
       )}
     </>
@@ -19,13 +21,7 @@ const ButtonLink = ({ to, label, muted, className, external }) => {
     </a>
   ) : (
     <Link className={className} to={to}>
-      {label}
-      {muted && (
-        <>
-          <br />
-          <span className="muted">{muted}</span>
-        </>
-      )}
+      {content}
     </Link>
   )
 }

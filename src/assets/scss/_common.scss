@@ -258,7 +258,7 @@ select {
 .main-btn {
   display: inline-block;
   font-weight: 700;
-  white-space: nowrap;
+  // white-space: nowrap;
   vertical-align: middle;
   @include user-select(none);
   padding: 12px 48px;
