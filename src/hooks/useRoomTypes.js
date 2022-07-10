@@ -16,16 +16,15 @@ import latopiazzaBathroom from '../assets/images/room-latopiazza-bathroom.jpg'
 import latopiazzaBed from '../assets/images/room-latopiazza-bed-4.jpg'
 import latopiazzaDetail from '../assets/images/room-latopiazza-detail-3.jpg'
 import latopiazzaLarge from '../assets/images/room-latopiazza-large-1.jpg'
-import { getRooms } from './rooms'
+import { useRooms } from './useRooms'
 
-export const roomTypes = () => {
-  const rooms = getRooms()
-  return [
+export const useRoomTypes = () => {
+  const { rooms } = useRooms()
+  const roomTypes = [
     // direttore
     {
       id: 1,
       room: rooms[0],
-      blurb: i18n.t('Intimate and welcoming'),
       cardVertical: {
         caption: i18n.t('Bathroom'),
         icon: 'fas fa-bath',
@@ -56,7 +55,6 @@ export const roomTypes = () => {
     {
       id: 2,
       room: rooms[1],
-      blurb: i18n.t('Elegant suite'),
       cardVertical: {
         caption: i18n.t('Bathroom'),
         icon: 'fas fa-sink',
@@ -87,7 +85,6 @@ export const roomTypes = () => {
     {
       id: 3,
       room: rooms[2],
-      blurb: i18n.t('Poetic suite'),
       cardVertical: {
         caption: i18n.t('Living room'),
         icon: 'fa fas-couch',
@@ -118,7 +115,6 @@ export const roomTypes = () => {
     {
       id: 4,
       room: rooms[3],
-      blurb: i18n.t('Romantic suite'),
       cardVertical: {
         caption: i18n.t('Curated details'),
         icon: 'fas fa-lightbulb',
@@ -145,4 +141,6 @@ export const roomTypes = () => {
       },
     },
   ]
+
+  return { roomTypes }
 }

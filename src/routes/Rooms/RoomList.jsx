@@ -98,7 +98,7 @@ const RoomCard = (room) => {
 }
 
 export const RoomList = () => {
-  const rooms = useRooms()
+  const { rooms } = useRooms()
 
   if (!rooms || rooms.length === 0)
     return <p>We are sorry, there are no available rooms</p>

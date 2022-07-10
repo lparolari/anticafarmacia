@@ -52,10 +52,12 @@ import latopiazzaLarge2 from '../assets/images/room-latopiazza-large-2.jpg'
 export const useRooms = () => {
   const { t } = useTranslation()
 
-  return [
+  const rooms = [
     {
       id: 1,
+      name: 'Direttore',
       title: t('Camera Direttore'),
+      blurb: t('Intimate and welcoming'),
       description: t(
         "Camera matrimoniale con bagno. Terrazzino. Pavimento in cementine originali primo '900, intonaci in grassello di malta, soffitto con travi in legno massiccio a vista, legni antichi, lampadario vintage originale, luci artigianali, ampio mobile guardaroba su misura, tavolo-scrivania di design."
       ),
@@ -91,7 +93,9 @@ export const useRooms = () => {
 
     {
       id: 2,
+      name: 'Lato Piazza',
       title: t('Camera Lato Piazza'),
+      blurb: t('Elegant suite'),
       description: t(
         'Camera su due livelli, ampia zona living e soppalco. Due letti singoli nel living, letto matrimoniale e bagno sul soppalco con vasca a vista. Zona cottura attrezzata e tavolo da pranzo. Parquet in larice, lucernari, pareti in sasso e in grassello di malta, legni antichi. Luci artigianali. Ampli mobili guardaroba con assi di recupero.'
       ),
@@ -136,7 +140,9 @@ export const useRooms = () => {
 
     {
       id: 3,
+      name: 'Centrale',
       title: t('Camera Centrale'),
+      blurb: t('Poetic suite'),
       description: t(
         'Camera su due livelli,zona living e soppalco. Un letto singolo nel living, letto matrimoniale e bagno sul soppalco con doccia. Zona cottura attrezzata e tavolo da pranzo. Pavimento in cotto originale, tetto a vista, lucernari, pareti in sasso e in grassello di malta, legni antichi. Tavolino scrittoio. Luci artigianali. Ampio mobile guardaroba su misura.'
       ),
@@ -182,7 +188,9 @@ export const useRooms = () => {
 
     {
       id: 4,
+      name: 'Lato Mamma',
       title: t('Camera Lato Mamma'),
+      blurb: t('Romantic suite'),
       description: t(
         'Camera su due livelli, zona living e soppalco. Un letto matrimoniale alla francese nel living, letto matrimoniale e bagno sul soppalco con vasca a vista. Zona cottura attrezzata e tavolo da pranzo. Pavimento in cotto originale, tetto a vista, lucernari, pareti in sasso e in grassello di malta, legni antichi. Luci artigianali. Ampli mobili guardaroba con assi di recupero.'
       ),
@@ -225,4 +233,8 @@ export const useRooms = () => {
       ],
     },
   ]
+
+  const getById = (id) => rooms.find((room) => room.id === id)
+
+  return { rooms, getById }
 }

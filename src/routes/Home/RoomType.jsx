@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 // import ReactMarkdown from 'react-markdown'
 import bg01 from '../../assets/img/bg/01.jpg'
-import { roomTypes } from '../../data/roomTypes'
+import { useRoomTypes } from '../../hooks/useRoomTypes'
 
 const RoomTypePane = ({ roomType }) => (
   <Tab.Pane eventKey={roomType.id}>
@@ -23,7 +23,7 @@ const RoomTypePane = ({ roomType }) => (
               marginBottom: '30px',
             }}
           >
-            {roomType.blurb}
+            {roomType.room.blurb}
           </p>
         </div>
       </div>
@@ -160,6 +160,7 @@ const RoomTypePane = ({ roomType }) => (
 const RoomType = () => {
   const { t } = useTranslation()
   const getRoomName = (roomType) => roomType.room.title
+  const { roomTypes } = useRoomTypes()
 
   return (
     <section
