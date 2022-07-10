@@ -6,7 +6,7 @@ import { global } from '../../data/global'
 import { locations } from '../../utils/locations'
 import { Backtotop } from './Backtotop'
 
-const Footer = () => {
+export const Footer = () => {
   const { defaultSeo, fiscal } = global
   const { t } = useTranslation()
   return (

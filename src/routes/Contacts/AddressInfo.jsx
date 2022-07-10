@@ -6,7 +6,7 @@ export const AddressInfo = () => (
     style={{ border: 0 }}
     allowFullScreen=""
     loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
+    referrerPolicy="no-referrer-when-downgrade"
     title="map"
   />
 )
