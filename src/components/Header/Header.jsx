@@ -308,6 +308,7 @@ const HeaderInfo = ({ mobile, whatsapp }) => (
 )
 
 const SideInfo = ({ mobile1, mobile2, whatsapp, email }) => {
+  const { t } = useTranslation()
   const emailStr = (
     <>
       {email.displayValue.split('@')[0]} <br />
@@ -319,28 +320,28 @@ const SideInfo = ({ mobile1, mobile2, whatsapp, email }) => {
       <div className="item">
         <a href={whatsapp.href}>
           <i className="fab fa-whatsapp" />
-          <span>Whatsapp</span>
+          <span>{t('Whatsapp')}</span>
           <h5 className="title">{whatsapp.displayValue}</h5>
         </a>
       </div>
       <div className="item">
         <a href={mobile1.href}>
           <i className="fal fa-phone" />
-          <span>Telefono primario</span>
+          <span>{t('Primary phone')}</span>
           <h5 className="title">{mobile1.displayValue}</h5>
         </a>
       </div>
       <div className="item">
         <a href={mobile2.href}>
           <i className="fal fa-phone" />
-          <span>Telefono secondario</span>
+          <span>{t('Secondary phone')}</span>
           <h5 className="title">{mobile2.displayValue}</h5>
         </a>
       </div>
       <div className="item">
         <a href={email.href}>
           <i className="fab fa-whatsapp" />
-          <span>Email</span>
+          <span>{t('Email')}</span>
           <h5 className="title">{emailStr}</h5>
         </a>
       </div>

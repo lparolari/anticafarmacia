@@ -25,7 +25,7 @@ i18n
   .init({
     detection: detectionOptions,
     resources,
-    fallbackLng: 'en',
+    fallbackLng: 'it',
     supportedLngs: ['en', 'it', 'de'],
     keySeparator: false,
     nsSeparator: false,
