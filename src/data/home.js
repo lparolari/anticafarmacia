@@ -1,3 +1,3 @@
 export const home = {
-  banner: { fromPrice: 80 },
+  banner: { fromPrice: 100 },
 }

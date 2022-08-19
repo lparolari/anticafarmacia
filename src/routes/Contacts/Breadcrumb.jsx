@@ -19,7 +19,7 @@ export const Breadcrumb = () => {
     >
       <div className="container">
         <div className="breadcrumb-text">
-          <span>{t('Available for any doubt or need.')}</span>
+          <span>{t('Available for any questions or needs')}</span>
           <h2 className="page-title">{t('Contacts')}</h2>
           <ul className="breadcrumb-nav">
             <li>

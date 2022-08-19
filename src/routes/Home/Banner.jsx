@@ -7,12 +7,13 @@ import Slider from 'react-slick'
 import dinnerRoom1 from '../../assets/images/dinner-room-1.jpg'
 import guesthouseExternalFacade from '../../assets/images/guesthouse-external-facade.jpg'
 import { BorderBtnLink, FilledBtnLink } from '../../components/Button/Button'
-import { global } from '../../data/global'
 import { home } from '../../data/home'
+import { useGlobal } from '../../hooks/useGlobal'
 import { locations } from '../../utils/locations'
 
 const Banner = () => {
   const { t } = useTranslation()
+  const global = useGlobal()
 
   const sliderSettings = {
     slidesToShow: 1,
@@ -37,14 +38,14 @@ const Banner = () => {
                 {t('Overnight stay and local cuisine')}
               </span>
               <h1 className="title">
-                {t('A unique experience in italian alps')}
+                {t('A unique experience in the Italian Alps')}
               </h1>
               <ul>
                 <li>
                   <FilledBtnLink
                     to={locations.rooms}
                     label={t('Prices')}
-                    muted={t('From {{ price }}€', {
+                    muted={t('Rooms from €{{ price }}', {
                       price: home.banner.fromPrice,
                     })}
                   />

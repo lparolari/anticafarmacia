@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next'
 
-import { facilities } from '../../data/facilities'
+import { useFacilities } from '../../hooks/useFacilities'
 
 const About = () => {
   const { t } = useTranslation()
+  const facilities = useFacilities()
+
   return (
     <section className="about-section pt-115 pb-115">
       <div className="container">

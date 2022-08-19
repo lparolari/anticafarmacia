@@ -3,12 +3,14 @@ import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 
+import de from './de.json'
 import en from './en.json'
 import it from './it.json'
 
 export const resources = {
   it: { translation: it },
   en: { translation: en },
+  de: { translation: de },
 }
 
 const detectionOptions = {
@@ -24,7 +26,7 @@ i18n
     detection: detectionOptions,
     resources,
     fallbackLng: 'en',
-    supportedLngs: ['en', 'it'],
+    supportedLngs: ['en', 'it', 'de'],
     keySeparator: false,
     nsSeparator: false,
     interpolation: {

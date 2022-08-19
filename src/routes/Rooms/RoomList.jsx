@@ -9,14 +9,13 @@ import { locations } from '../../utils/locations'
 
 const ReadMoreParagraph = ({ text }) => {
   const { t } = useTranslation()
-  const [showText, setShowText] = React.useState(
-    text ? `${text.substring(0, 140)}...` : ''
-  )
+  const [showMore, setShowMore] = React.useState(false)
+
   return (
     <p>
-      {showText}{' '}
-      {text && text.length !== showText.length && (
-        <span className="read-more" onClick={() => setShowText(text)}>
+      {showMore ? text : `${text?.substring(0, 140)}...`}{' '}
+      {text && !showMore && (
+        <span className="read-more" onClick={() => setShowMore(true)}>
           {t('Read more')}
         </span>
       )}
@@ -71,7 +70,7 @@ const RoomCard = (room) => {
                 <ReadMoreParagraph text={description} />
                 <br />
                 <p>
-                  <b>{t('Pricing')}</b> {pricing}
+                  <b>{t('Price')}</b> {pricing}
                 </p>
               </div>
               <div className="col-sm-5">

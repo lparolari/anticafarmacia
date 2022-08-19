@@ -1,10 +1,11 @@
 import { useTranslation } from 'react-i18next'
 
-import { global } from '../../data/global'
+import { useGlobal } from '../../hooks/useGlobal'
 
 export const ContactInfo = () => {
-  const { address, mobile1, mobile2, email } = global.contacts
+  const global = useGlobal()
   const { t } = useTranslation()
+  const { address, mobile1, mobile2, email } = global.contacts
   return (
     <div className="contact-info">
       <div className="row justify-content-center">
@@ -39,7 +40,7 @@ export const ContactInfo = () => {
             </div>
             <div className="desc">
               <h4>{t('Email')}</h4>
-              <p>{email.displayValue}</p>
+              <p>{email.displayValue.split('@').join(' @ ')}</p>
             </div>
           </div>
         </div>

@@ -56,27 +56,27 @@ export const useRooms = () => {
     {
       id: 1,
       name: 'Direttore',
-      title: t('Camera Direttore'),
+      title: t('Direttore Room'),
       blurb: t('Intimate and welcoming'),
-      description: t(
-        "Camera matrimoniale con bagno. Terrazzino. Pavimento in cementine originali primo '900, intonaci in grassello di malta, soffitto con travi in legno massiccio a vista, legni antichi, lampadario vintage originale, luci artigianali, ampio mobile guardaroba su misura, tavolo-scrivania di design."
-      ),
-      price: 80,
+      description: t('rooms_direttore_desc'),
+      price: 100,
       period: t('Night'),
       amenities: [
         { id: 1, title: t('Double bed'), icon: 'fas fa-bed' },
         { id: 2, title: t('Shower'), icon: 'fas fa-shower' },
-        { id: 3, title: t('Tv'), icon: 'fas fa-tv' },
+        { id: 3, title: t('TV set'), icon: 'fas fa-tv' },
         { id: 4, title: t('Safe'), icon: 'fas fa-fingerprint' },
-        { id: 5, title: t('Tea set, coffee'), icon: 'fas fa-mug-hot' },
+        {
+          id: 5,
+          title: t('Kettle, herbal teas, coffee'),
+          icon: 'fas fa-mug-hot',
+        },
         { id: 6, title: t('Hairdryer'), icon: 'fas fa-hot-tub' },
         { id: 7, title: t('Courtesy set'), icon: 'fas fa-cookie' },
         { id: 8, title: t('Parking'), icon: 'fas fa-car' },
         { id: 9, title: t('WiFi'), icon: 'fas fa-wifi' },
       ],
-      pricing: t(
-        'A partire da €80 pernottamento per due persone. Contattaci per preventivo senza alcun impegno. Camere doppie, triple e quadruple. Con o senza colazione/cena.'
-      ),
+      pricing: t('rooms_pricing_direttore'),
       landingImage: direttoreLarge,
       gallery: [
         direttoreBed1,
@@ -94,20 +94,22 @@ export const useRooms = () => {
     {
       id: 2,
       name: 'Lato Piazza',
-      title: t('Camera Lato Piazza'),
+      title: t('Lato Piazza Room'),
       blurb: t('Elegant suite'),
-      description: t(
-        'Camera su due livelli, ampia zona living e soppalco. Due letti singoli nel living, letto matrimoniale e bagno sul soppalco con vasca a vista. Zona cottura attrezzata e tavolo da pranzo. Parquet in larice, lucernari, pareti in sasso e in grassello di malta, legni antichi. Luci artigianali. Ampli mobili guardaroba con assi di recupero.'
-      ),
-      price: 100,
+      description: t('rooms_latopiazza_desc'),
+      price: 130,
       period: t('Night'),
       amenities: [
         { id: 1, title: t('Double bed'), icon: 'fas fa-bed' },
         { id: 2, title: t('Two single beds'), icon: 'fas fa-bed' },
         { id: 3, title: t('Bath'), icon: 'fas fa-bath' },
-        { id: 4, title: t('TV'), icon: 'fas fa-tv' },
+        { id: 4, title: t('TV set'), icon: 'fas fa-tv' },
         { id: 5, title: t('Safe'), icon: 'fas fa-fingerprint' },
-        { id: 6, title: t('Tea set, coffee'), icon: 'fas fa-mug-hot' },
+        {
+          id: 6,
+          title: t('Kettle, herbal teas, coffee'),
+          icon: 'fas fa-mug-hot',
+        },
         { id: 7, title: t('Hairdryer'), icon: 'fas fa-hot-tub' },
         { id: 8, title: t('Courtesy set'), icon: 'fas fa-cookie' },
         { id: 9, title: t('Parking'), icon: 'fas fa-car' },
@@ -119,9 +121,7 @@ export const useRooms = () => {
         },
         { id: 12, title: t('WiFi'), icon: 'fas fa-wifi' },
       ],
-      pricing: t(
-        'A partire da €100 pernottamento e uso cucina per due persone, 120 per tre persone, 140 per quattro persone. Contattaci per preventivo senza alcun impegno. Camere doppie, triple e quadruple. Con o senza colazione/cena.'
-      ),
+      pricing: t('rooms_pricing_general'),
       landingImage: latopiazzaLarge,
       gallery: [
         latopiazzaLarge2,
@@ -141,20 +141,22 @@ export const useRooms = () => {
     {
       id: 3,
       name: 'Centrale',
-      title: t('Camera Centrale'),
+      title: t('Centrale Room'),
       blurb: t('Poetic suite'),
-      description: t(
-        'Camera su due livelli,zona living e soppalco. Un letto singolo nel living, letto matrimoniale e bagno sul soppalco con doccia. Zona cottura attrezzata e tavolo da pranzo. Pavimento in cotto originale, tetto a vista, lucernari, pareti in sasso e in grassello di malta, legni antichi. Tavolino scrittoio. Luci artigianali. Ampio mobile guardaroba su misura.'
-      ),
-      price: 100,
+      description: t('rooms_centrale_desc'),
+      price: 130,
       period: t('Night'),
       amenities: [
         { id: 1, title: t('Double bed'), icon: 'fas fa-bed' },
         { id: 2, title: t('Single bed'), icon: 'fas fa-bed' },
         { id: 3, title: t('Shower'), icon: 'fas fa-shower' },
-        { id: 4, title: t('TV'), icon: 'fas fa-tv' },
+        { id: 4, title: t('TV set'), icon: 'fas fa-tv' },
         { id: 5, title: t('Safe'), icon: 'fas fa-fingerprint' },
-        { id: 6, title: t('Tea set, coffee'), icon: 'fas fa-mug-hot' },
+        {
+          id: 6,
+          title: t('Kettle, herbal teas, coffee'),
+          icon: 'fas fa-mug-hot',
+        },
         { id: 7, title: t('Hairdryer'), icon: 'fas fa-hot-tub' },
         { id: 8, title: t('Courtesy set'), icon: 'fas fa-cookie' },
         { id: 9, title: t('Parking'), icon: 'fas fa-car' },
@@ -166,9 +168,7 @@ export const useRooms = () => {
         },
         { id: 12, title: t('WiFi'), icon: 'fas fa-wifi' },
       ],
-      pricing: t(
-        'A partire da €100 pernottamento e uso cucina per due persone, 120 per tre persone. Contattaci per preventivo senza alcun impegno. Camere doppie, triple e quadruple. Con o senza colazione/cena.'
-      ),
+      pricing: t('rooms_pricing_general'),
       landingImage: centraleLarge1,
       gallery: [
         centraleLarge,
@@ -189,19 +189,21 @@ export const useRooms = () => {
     {
       id: 4,
       name: 'Lato Mamma',
-      title: t('Camera Lato Mamma'),
+      title: t('Lato Mamma Room'),
       blurb: t('Romantic suite'),
-      description: t(
-        'Camera su due livelli, zona living e soppalco. Un letto matrimoniale alla francese nel living, letto matrimoniale e bagno sul soppalco con vasca a vista. Zona cottura attrezzata e tavolo da pranzo. Pavimento in cotto originale, tetto a vista, lucernari, pareti in sasso e in grassello di malta, legni antichi. Luci artigianali. Ampli mobili guardaroba con assi di recupero.'
-      ),
-      price: 100,
+      description: t('rooms_latomamma_desc'),
+      price: 130,
       period: t('Night'),
       amenities: [
         { id: 1, title: t('Double bed'), icon: 'fas fa-bed' },
         { id: 3, title: t('Bath'), icon: 'fas fa-bath' },
-        { id: 4, title: t('TV'), icon: 'fas fa-tv' },
+        { id: 4, title: t('TV set'), icon: 'fas fa-tv' },
         { id: 5, title: t('Safe'), icon: 'fas fa-fingerprint' },
-        { id: 6, title: t('Tea set, coffee'), icon: 'fas fa-mug-hot' },
+        {
+          id: 6,
+          title: t('Kettle, herbal teas, coffee'),
+          icon: 'fas fa-mug-hot',
+        },
         { id: 7, title: t('Hairdryer'), icon: 'fas fa-hot-tub' },
         { id: 8, title: t('Courtesy set'), icon: 'fas fa-cookie' },
         { id: 9, title: t('Parking'), icon: 'fas fa-car' },
@@ -213,9 +215,7 @@ export const useRooms = () => {
         },
         { id: 12, title: t('WiFi'), icon: 'fas fa-wifi' },
       ],
-      pricing: t(
-        'A partire da €100 pernottamento e uso cucina per due persone, 120 per tre persone. Contattaci per preventivo senza alcun impegno. Camere doppie, triple e quadruple. Con o senza colazione/cena.'
-      ),
+      pricing: t('rooms_pricing_general'),
       landingImage: latomammaLarge,
       gallery: [
         latomammaDetail1,

@@ -3,11 +3,12 @@ import { useTranslation } from 'react-i18next'
 
 import dinnerRoom from '../../assets/images/dinner-room-2.jpg'
 import { BorderBtnLink, FilledBtnLink } from '../../components/Button/Button'
-import { global } from '../../data/global'
+import { useGlobal } from '../../hooks/useGlobal'
 import { locations } from '../../utils/locations'
 
 export const DiscoverUs = () => {
   const { t } = useTranslation()
+  const global = useGlobal()
   return (
     <div
       className="room-bg"
@@ -24,11 +25,7 @@ export const DiscoverUs = () => {
             <div className="col-lg-10">
               <div className="cta-text text-center">
                 <span>{t('Dedicate yourself some time')}</span>
-                <h2>
-                  {t(
-                    "Un luogo e un'atmosfera unica in cui concedersi il tempo di un'esperienza di benessere"
-                  )}
-                </h2>
+                <h2>{t('home_parallax_cta_title')}</h2>
                 <ul className="mt-50">
                   <li>
                     <FilledBtnLink

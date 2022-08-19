@@ -2,12 +2,12 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import { global } from '../../data/global'
+import { useGlobal } from '../../hooks/useGlobal'
 import { locations } from '../../utils/locations'
 import { Backtotop } from './Backtotop'
 
 export const Footer = () => {
-  const { defaultSeo, fiscal } = global
+  const { defaultSeo, fiscal } = useGlobal()
   const { t } = useTranslation()
   return (
     <>

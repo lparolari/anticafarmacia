@@ -44,7 +44,7 @@ export const useRoomTypes = () => {
         img: direttoreDetail1,
       },
       cardSquare2: {
-        caption: i18n.t('Curated details'),
+        caption: i18n.t('Fine details'),
         icon: 'fas fa-lightbulb',
         muted: i18n.t('Elegance and class'),
         img: direttoreDetail2,
@@ -76,7 +76,7 @@ export const useRoomTypes = () => {
       cardSquare2: {
         caption: i18n.t('Room'),
         icon: 'fas fa-bed',
-        muted: i18n.t('With bath'),
+        muted: i18n.t('With an exposed bath'),
         img: latopiazzaBed,
       },
     },
@@ -116,7 +116,7 @@ export const useRoomTypes = () => {
       id: 4,
       room: rooms[3],
       cardVertical: {
-        caption: i18n.t('Curated details'),
+        caption: i18n.t('Fine details'),
         icon: 'fas fa-lightbulb',
         muted: i18n.t('Elegance and class'),
         img: latomammaDetail3,
@@ -134,9 +134,9 @@ export const useRoomTypes = () => {
         img: latomammaBed,
       },
       cardSquare2: {
-        caption: i18n.t('Bagno'),
+        caption: i18n.t('Bathroom'),
         icon: 'fas fa-bath',
-        muted: i18n.t('With bath'),
+        muted: i18n.t('With an exposed bath'),
         img: latomammaBathroom,
       },
     },

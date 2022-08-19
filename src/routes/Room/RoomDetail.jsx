@@ -63,7 +63,7 @@ export const RoomDetail = ({
                 /> */}
               </div>
               <div className="room-fearures clearfix mt-60 mb-60">
-                <h3 className="subtitle">Servizi</h3>
+                <h3 className="subtitle">{t('Facilities')}</h3>
                 <ul className="room-fearures-list">
                   {amenities.map((item, i) => (
                     <li key={i}>
@@ -75,7 +75,7 @@ export const RoomDetail = ({
               </div>
 
               <div className="room-fearures clearfix mt-60 mb-60">
-                <h3 className="subtitle">Descrizione</h3>
+                <h3 className="subtitle">{t('Description')}</h3>
                 <p>{description}</p>
               </div>
 
@@ -119,21 +119,21 @@ export const RoomDetail = ({
               </div> */}
 
               <div className="cancellation-box clearfix mb-60">
-                <h3 className="subtitle">Prezzi</h3>
+                <h3 className="subtitle">{t('Prices')}</h3>
                 <p>{pricing}</p>
               </div>
 
               <FilledBtnLink
                 label={t('Contact us and book now')}
-                muted={t(
-                  "It's always a good moment to dedicate yourself some time: take a break from the city chaos!"
-                )}
+                muted={`${t(
+                  "It's always a good moment to dedicate yourself some time"
+                )}: ${t('Take a break from the city chaos')}`}
                 to="/"
                 className="mb-60 w-100 text-center"
               />
 
               <div className="room-fearures clearfix mb-60">
-                <h3 className="subtitle">Galleria</h3>
+                <h3 className="subtitle">{t('Gallery')}</h3>
                 <Gallery images={gallery} />
               </div>
               {/* <div className="room-map mb-60 position-relative" id="roomMap">

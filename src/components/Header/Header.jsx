@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import logo from '../../assets/images/logo.png'
-import { global } from '../../data/global'
+import { useGlobal } from '../../hooks/useGlobal'
 import { locations } from '../../utils/locations'
 import Canvas from './Canvas'
 
@@ -49,6 +49,7 @@ export const Header = ({
   settings: { alwaysStiky } = { alwaysStiky: true },
 }) => {
   const { t } = useTranslation()
+  const global = useGlobal()
 
   const navigationmenu = [
     {
@@ -262,24 +263,28 @@ export const Header = ({
 const SelectLanguage = ({ vertical }) => (
   <div style={{ display: 'flex', flexDirection: vertical ? 'column' : 'row' }}>
     <div style={vertical ? {} : { marginRight: '0.5rem' }}>
-      <ReactCountryFlag
-        countryCode="GB"
-        style={{
-          fontSize: '1.5rem',
-          cursor: 'pointer',
-        }}
+      <span
+        style={{ cursor: 'pointer', padding: 0, fontSize: '18px' }}
+        onClick={() => i18next.changeLanguage('it')}
+      >
+        🇮🇹
+      </span>
+    </div>
+    <div style={vertical ? {} : { marginRight: '0.5rem' }}>
+      <span
+        style={{ cursor: 'pointer', padding: 0, fontSize: '18px' }}
         onClick={() => i18next.changeLanguage('en')}
-      />
+      >
+        🇬🇧
+      </span>
     </div>
     <div>
-      <ReactCountryFlag
-        countryCode="IT"
-        style={{
-          fontSize: '1.5rem',
-          cursor: 'pointer',
-        }}
-        onClick={() => i18next.changeLanguage('it')}
-      />
+      <span
+        style={{ cursor: 'pointer', padding: 0, fontSize: '18px' }}
+        onClick={() => i18next.changeLanguage('de')}
+      >
+        🇩🇪
+      </span>
     </div>
   </div>
 )

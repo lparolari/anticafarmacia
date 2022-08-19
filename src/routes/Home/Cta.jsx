@@ -3,11 +3,13 @@ import { Trans, useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import StrongButton from '../../components/Button/StrongButton'
-import { feats } from '../../data/feats'
-import { global } from '../../data/global'
+import { useFeats } from '../../hooks/useFeats'
+import { useGlobal } from '../../hooks/useGlobal'
 
 const Cta = () => {
   const { t } = useTranslation()
+  const feats = useFeats()
+  const global = useGlobal()
   return (
     <section className="cta-section pt-115 pb-160">
       <div className="container">
@@ -19,7 +21,7 @@ const Cta = () => {
                   <span className="title-tag">
                     {t('Elegance and refinement')}
                   </span>
-                  <h2>{t('The refuge of your excursion')}</h2>
+                  <h2>{t('The refuge of your hike')}</h2>
                 </div>
                 <p>
                   <Trans
