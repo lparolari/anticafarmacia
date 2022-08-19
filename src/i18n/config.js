@@ -14,7 +14,7 @@ export const resources = {
 }
 
 const detectionOptions = {
-  order: ['localStorage'],
+  order: ['navigator', 'localStorage'],
   lookupLocalStorage: 'anticafarmacia:lng',
   caches: ['localStorage'],
 }
@@ -25,7 +25,7 @@ i18n
   .init({
     detection: detectionOptions,
     resources,
-    fallbackLng: 'it',
+    fallbackLng: 'en',
     supportedLngs: ['en', 'it', 'de'],
     keySeparator: false,
     nsSeparator: false,
