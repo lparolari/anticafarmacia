@@ -3,7 +3,6 @@
 import React from 'react'
 import { Nav, Tab } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
 
 // import ReactMarkdown from 'react-markdown'
 import bg01 from '../../assets/img/bg/01.jpg'
@@ -31,10 +30,7 @@ const RoomTypePane = ({ roomType }) => (
         <div className="col-lg-8">
           <div className="row">
             <div className="col-lg-6 col-sm-6">
-              <div
-                className="room-box"
-                onClick={() => navigate(`/room-details/${roomType.room.id}`)}
-              >
+              <div className="room-box">
                 <div
                   className="room-bg"
                   style={{
@@ -46,25 +42,12 @@ const RoomTypePane = ({ roomType }) => (
                     <i className={roomType.cardSquare1.icon} />
                     {roomType.cardSquare1.muted}
                   </span>
-                  <h3>
-                    <Link to={`/room-details/${roomType.room.id}`}>
-                      {roomType.cardSquare1.caption}
-                    </Link>
-                  </h3>
+                  <h3>{roomType.cardSquare1.caption}</h3>
                 </div>
-                <Link
-                  to={`/room-details/${roomType.room.id}`}
-                  className="room-link"
-                >
-                  <i className="fal fa-arrow-right" />
-                </Link>
               </div>
             </div>
             <div className="col-lg-6 col-sm-6">
-              <div
-                className="room-box"
-                onClick={() => navigate(`/room-details/${roomType.room.id}`)}
-              >
+              <div className="room-box">
                 <div
                   className="room-bg"
                   style={{
@@ -76,25 +59,12 @@ const RoomTypePane = ({ roomType }) => (
                     <i className={roomType.cardSquare2.icon} />
                     {roomType.cardSquare2.muted}
                   </span>
-                  <h3>
-                    <Link to={`/room-details/${roomType.room.id}`}>
-                      {roomType.cardSquare2.caption}
-                    </Link>
-                  </h3>
+                  <h3>{roomType.cardSquare2.caption}</h3>
                 </div>
-                <Link
-                  to={`/room-details/${roomType.room.id}`}
-                  className="room-link"
-                >
-                  <i className="fal fa-arrow-right" />
-                </Link>
               </div>
             </div>
             <div className="col-12">
-              <div
-                className="room-box extra-wide"
-                onClick={() => navigate(`/room-details/${roomType.room.id}`)}
-              >
+              <div className="room-box extra-wide">
                 <div
                   className="room-bg"
                   style={{
@@ -106,27 +76,14 @@ const RoomTypePane = ({ roomType }) => (
                     <i className={roomType.cardHorizontal.icon} />
                     {roomType.cardHorizontal.muted}
                   </span>
-                  <h3>
-                    <Link to={`/room-details/${roomType.room.id}`}>
-                      {roomType.cardHorizontal.caption}
-                    </Link>
-                  </h3>
+                  <h3>{roomType.cardHorizontal.caption}</h3>
                 </div>
-                <Link
-                  to={`/room-details/${roomType.room.id}`}
-                  className="room-link"
-                >
-                  <i className="fal fa-arrow-right" />
-                </Link>
               </div>
             </div>
           </div>
         </div>
         <div className="col-lg-4">
-          <div
-            className="room-box extra-height"
-            onClick={() => navigate(`/room-details/${roomType.room.id}`)}
-          >
+          <div className="room-box extra-height">
             <div
               className="room-bg"
               style={{
@@ -138,18 +95,8 @@ const RoomTypePane = ({ roomType }) => (
                 <i className={roomType.cardVertical.icon} />
                 {roomType.cardVertical.muted}
               </span>
-              <h3>
-                <Link to={`/room-details/${roomType.room.id}`}>
-                  {roomType.cardVertical.caption}
-                </Link>
-              </h3>
+              <h3>{roomType.cardVertical.caption}</h3>
             </div>
-            <Link
-              to={`/room-details/${roomType.room.id}`}
-              className="room-link"
-            >
-              <i className="fal fa-arrow-right" />
-            </Link>
           </div>
         </div>
       </div>

@@ -1,15 +1,13 @@
 import React from 'react'
-import { Trans, useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
-import StrongButton from '../../components/Button/StrongButton'
+import { BorderBtnLink } from '../../components/Button/Button'
 import { useFeats } from '../../hooks/useFeats'
-import { useGlobal } from '../../hooks/useGlobal'
+import { locations } from '../../utils/locations'
 
 const Cta = () => {
   const { t } = useTranslation()
   const feats = useFeats()
-  const global = useGlobal()
   return (
     <section className="cta-section pt-115 pb-160">
       <div className="container">
@@ -23,19 +21,11 @@ const Cta = () => {
                   </span>
                   <h2>{t('The refuge of your hike')}</h2>
                 </div>
-                <p>
-                  <Trans
-                    i18nKey="La foresteria Antica Farmacia è un luogo raffinato, che <b>rispetta le origini e la storia</b> della zona di Cedegolo. Concediti un momento di piacere fuori dal caos della città."
-                    components={{ b: <b /> }}
-                  />
-                </p>
-                <Link to={global.contacts.whatsapp.href}>
-                  <StrongButton
-                    label={t('Contact us')}
-                    muted={t('With whatsapp')}
-                    icon="fab fa-whatsapp"
-                  />
-                </Link>
+                <p className="mb-20">{t('anticafarmacia_desc2')}</p>
+                <BorderBtnLink
+                  to={locations.booking}
+                  label={t('Check availability')}
+                />
               </div>
             </div>
             <div className="col-lg-6 col-md-10 col-sm-11 col-10 order-1 order-lg-2">

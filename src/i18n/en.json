@@ -10,7 +10,7 @@
   "Book now": "Book now",
   "With whatsapp": "With whatsapp",
   "A unique experience in the Italian Alps": "A unique experience in the Italian Alps",
-  "Overnight stay and local cuisine": "Overnight stay and local cuisine",
+  "Overnight stay and local breakfast": "Overnight stay and local breakfast",
   "Relaxing and refined accommodation": "Relaxing and refined accommodation",
   "A step back in time in a charming setting": "A step back in time in a charming setting",
   "Intimate and welcoming": "Intimate and welcoming",
@@ -86,6 +86,8 @@
   "Facilities": "Facilities",
   "Description": "Description",
   "Gallery": "Gallery",
+  "Common areas": "Common areas",
+  "Check availability": "Check availability",
   "rooms_pricing_general": "Overnight stay and use of kitchen for two persons. For more people and/or more days contact us for a no-obligation quote. Double, triple and quadruple rooms. With or without breakfast/dinner.",
   "rooms_pricing_direttore": "Overnight stay for two persons. For more people and/or more days contact us for a no-obligation quote. Double, triple and quadruple rooms. With or without breakfast/dinner.",
   "rooms_latomamma_desc": "Room on two levels, living area and mezzanine. A double French bed in the living room, double bed and bathroom on the mezzanine floor with bath. Equipped kitchen area and dining table. Original terracotta floor, exposed roof, skylights, stone and mortar walls, antique woodwork. Handcrafted lights. Large wardrobe furniture with reclaimed boards.",
@@ -95,7 +97,8 @@
   "home_parallax_cta_title": "A unique place and atmosphere in which to indulge in a wellness experience",
   "home_feats_desc": "The Antica Farmacia guesthouse is a refined place that respects the origins and history of the Cedegolo area. Treat yourself to a moment of pleasure away from the hustle and bustle of the city.",
   "home_feats_relax_desc": "Spacious rooms with attention to every detail where everything speaks of times past. A quiet place with every comfort where you can relax far from the chaos.",
-  "home_feats_cuisine_desc": "Typical Camuna cuisine with seasonal and local menus served in the splendid and romantic lounge. A few tables and soft lighting for a pleasant evening. No travelling, no car, just the pleasures of company and the palate. Reservations required.",
+  "home_feats_breakfast_desc": "Authentic breakfast with fresh, local products, served in a cozy and relaxed setting. A perfect start to the day, filled with taste and tranquility.",
   "home_feats_mountain_desc": "At the base of the main access routes to the Adamello ski area and to spectacular and evocative high-altitude Alpine valleys such as Val Salarno, Val Adamè and Val Miller with natural and artificial lakes that are the result of splendid stone hydraulic works dating back to the first half of the 20th century.",
-  "anticafarmacia_desc": "The Foresteria Antica Farmacia is a refined place that has recently been restored respecting the building and its history as a tribute to the town of which it is an important part, in memory of the owner's parents and relatives now missed, and with thoughts of those dearest to him."
+  "anticafarmacia_desc": "The Foresteria Antica Farmacia is a refined place that has recently been restored respecting the building and its history as a tribute to the town of which it is an important part, in memory of the owner's parents and relatives now missed, and with thoughts of those dearest to him.",
+  "anticafarmacia_desc2": " The Antica Farmacia guesthouse is a refined place that honors the origins and history of the Cedegolo area. Treat yourself to a moment of pleasure away from the chaos of the city."
 }

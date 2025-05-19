@@ -77,7 +77,6 @@
       z-index: 1;
       overflow: hidden;
       margin-top: 15px;
-      cursor: pointer;
       &.extra-height {
         height: 575px;
         @media #{$md} {
@@ -119,6 +118,7 @@
         }
         h3 {
           font-size: 36px;
+          color: #fff;
           @media #{$sm} {
             font-size: 26px;
           }

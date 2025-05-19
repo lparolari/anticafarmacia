@@ -3,12 +3,10 @@ import { useTranslation } from 'react-i18next'
 
 import dinnerRoom from '../../assets/images/dinner-room-2.jpg'
 import { BorderBtnLink, FilledBtnLink } from '../../components/Button/Button'
-import { useGlobal } from '../../hooks/useGlobal'
 import { locations } from '../../utils/locations'
 
 export const DiscoverUs = () => {
   const { t } = useTranslation()
-  const global = useGlobal()
   return (
     <div
       className="room-bg"
@@ -29,16 +27,14 @@ export const DiscoverUs = () => {
                 <ul className="mt-50">
                   <li>
                     <FilledBtnLink
-                      to={locations.rooms}
-                      label={t('Discover')}
-                      muted={t('Our rooms')}
+                      to={locations.booking}
+                      label={t('Book now')}
                     />
                   </li>
                   <li>
                     <BorderBtnLink
-                      to={global.contacts.whatsapp.href}
+                      to={locations.contact}
                       label={t('Contact us')}
-                      muted={t('With whatsapp')}
                       external
                     />
                   </li>

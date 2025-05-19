@@ -27,9 +27,6 @@ export const Footer = () => {
                   <Link to={locations.home}>{t('Home')}</Link>
                 </p>
                 <p>
-                  <Link to={locations.rooms}>{t('Rooms')}</Link>
-                </p>
-                <p>
                   <Link to={locations.contacts}>{t('Contacts')}</Link>
                 </p>
                 {/* <p>

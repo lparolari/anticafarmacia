@@ -6,14 +6,11 @@ import Slider from 'react-slick'
 
 import dinnerRoom1 from '../../assets/images/dinner-room-1.jpg'
 import guesthouseExternalFacade from '../../assets/images/guesthouse-external-facade.jpg'
-import { BorderBtnLink, FilledBtnLink } from '../../components/Button/Button'
-import { home } from '../../data/home'
-import { useGlobal } from '../../hooks/useGlobal'
+import { FilledBtnLink } from '../../components/Button/Button'
 import { locations } from '../../utils/locations'
 
 const Banner = () => {
   const { t } = useTranslation()
-  const global = useGlobal()
 
   const sliderSettings = {
     slidesToShow: 1,
@@ -35,34 +32,20 @@ const Banner = () => {
           <div className="col-lg-6 col-md-6">
             <div className="banner-content">
               <span className="promo-tag">
-                {t('Overnight stay and local cuisine')}
+                {t('Overnight stay and local breakfast')}
               </span>
               <h1 className="title">
                 {t('A unique experience in the Italian Alps')}
               </h1>
               <ul>
-                <li>
-                  <FilledBtnLink
-                    to={locations.rooms}
-                    label={t('Prices')}
-                    muted={t('Rooms from €{{ price }}', {
-                      price: home.banner.fromPrice,
-                    })}
-                  />
-                </li>
-                <li>
-                  <BorderBtnLink
-                    to={global.contacts.whatsapp.href}
-                    label={t('Book now')}
-                    muted={t('With whatsapp')}
-                    external
-                  />
+                <li className="mb-50">
+                  <FilledBtnLink to={locations.booking} label={t('Book now')} />
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-lg-6 col-md-6">
-            <div className="banner-thumb d-none d-md-block">
+            <div className="banner-thumb">
               <Slider className="hero-slider-one" {...sliderSettings}>
                 {carousel.map((img, i) => (
                   <div key={i} className="single-thumb">

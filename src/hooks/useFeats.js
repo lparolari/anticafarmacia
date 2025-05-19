@@ -12,9 +12,9 @@ export const useFeats = () => {
     },
     {
       id: 2,
-      title: t('Zero-kilometer delicacies'),
+      title: t('Breakfast'),
       icon: 'fas fa-utensils',
-      desc: t('home_feats_cuisine_desc'),
+      desc: t('home_feats_breakfast_desc'),
     },
     {
       id: 3,

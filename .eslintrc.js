@@ -31,13 +31,13 @@ module.exports = {
     'import/extensions': [1, 'never'],
     'import/prefer-default-export': 'off',
     'no-undef': 'off',
-    'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
+    'simple-import-sort/imports': 'warn',
+    'simple-import-sort/exports': 'warn',
     'sort-imports': 'off',
     'import/order': 'off',
     'no-shadow': 'error',
     'prettier/prettier': [
-      'error',
+      'warn',
       {
         semi: false,
         singleQuote: true,

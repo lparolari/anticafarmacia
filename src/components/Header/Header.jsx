@@ -58,12 +58,12 @@ export const Header = ({
       linkText: t('Home'),
       child: false,
     },
-    {
-      id: 2,
-      link: locations.rooms,
-      linkText: t('Rooms'),
-      child: false,
-    },
+    // {
+    //   id: 2,
+    //   link: locations.rooms,
+    //   linkText: t('Rooms'),
+    //   child: false,
+    // },
     {
       id: 4,
       link: locations.contacts,
@@ -219,10 +219,7 @@ export const Header = ({
             </div>
 
             <div className={`nav-push-item ${hideClass}`}>
-              <HeaderInfo
-                mobile={global.contacts.mobile1}
-                whatsapp={global.contacts.whatsapp}
-              />
+              <HeaderInfo />
             </div>
             <div
               className={classNames('navbar-toggler', {
@@ -289,16 +286,16 @@ const SelectLanguage = ({ vertical }) => (
   </div>
 )
 
-const HeaderInfo = ({ mobile, whatsapp }) => (
+const HeaderInfo = () => (
   <div className="header-info d-lg-flex align-items-center">
     <div className="item">
-      <a href={mobile.href} className="main-btn bnt-border">
-        {i18next.t('Call us')}
+      <a href={locations.contacts} className="main-btn bnt-border">
+        {i18next.t('Contact us')}
       </a>
     </div>
     <div className="item">
-      <a href={whatsapp.href} className="main-btn btn-filled">
-        whatsapp
+      <a href={locations.booking} className="main-btn btn-filled">
+        {i18next.t('Book now')}
       </a>
     </div>
     <div className="item">

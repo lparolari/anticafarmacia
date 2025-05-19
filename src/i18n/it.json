@@ -10,7 +10,7 @@
   "Book now": "Prenota ora",
   "With whatsapp": "Con whatsapp",
   "A unique experience in the Italian Alps": "Un'esperienza unica tra le Alpi",
-  "Overnight stay and local cuisine": "Pernottamento e cucina tipica",
+  "Overnight stay and local breakfast": "Pernottamento e colazione",
   "Relaxing and refined accommodation": "Alloggi rilassanti e raffinati",
   "A step back in time in a charming setting": "Un salto indietro nel tempo in una cornice di charme",
   "Intimate and welcoming": "Intima e accogliente",
@@ -86,6 +86,8 @@
   "Facilities": "Servizi",
   "Description": "Descrizione",
   "Gallery": "Galleria",
+  "Common areas": "Aree comuni",
+  "Check availability": "Controlla disponibilità",
   "rooms_pricing_general": "Pernottamento ed uso cucina per due persone. Per più persone e/o per più giorni contattaci per preventivo senza alcun impegno. Camere doppie, triple e quadruple. Con o senza colazione/cena.",
   "rooms_pricing_direttore": "Pernottamento per due persone. Per più persone e/o per più giorni contattaci per preventivo senza alcun impegno. Camere doppie, triple e quadruple. Con o senza colazione/cena.",
   "rooms_latomamma_desc": "Camera su due livelli, zona living e soppalco. Un letto matrimoniale alla francese nel living, letto matrimoniale e bagno sul soppalco con vasca a vista. Zona cottura attrezzata e tavolo da pranzo. Pavimento in cotto originale, tetto a vista, lucernari, pareti in sasso e in grassello di malta, legni antichi. Luci artigianali. Ampli mobili guardaroba con assi di recupero.",
@@ -95,7 +97,8 @@
   "home_parallax_cta_title": "Un luogo e un'atmosfera unica in cui concedersi il tempo di un'esperienza di benessere",
   "home_feats_desc": "La foresteria Antica Farmacia è un luogo raffinato, che rispetta le origini e la storia della zona di Cedegolo. Concediti un momento di piacere fuori dal caos della città.",
   "home_feats_relax_desc": "Ampie camere curate in ogni dettaglio dove tutto parla del tempo passato. Un posto tranquillo e dotato di ogni comfort in cui rilassarti lontano dal caos.",
-  "home_feats_cuisine_desc": "Cucina tipica camuna con menù stagionali e del territorio serviti nello splendido e romantico salone. Pochi tavoli e luci soffuse per una piacevole serata. Niente spostamenti, niente macchina, solo i piaceri della compagnia e del palato. Su prenotazione.",
+  "home_feats_breakfast_desc": "Colazione autentica con prodotti freschi e locali, servita in un ambiente accogliente e rilassato. Un inizio di giornata all'insegna del gusto e della tranquillità.",
   "home_feats_mountain_desc": "Alla base delle principali vie di accesso al comprensorio dell'Adamello e a vallate alpine d'alta quota spettacolari e suggestive quali la Val Salarno, la Val Adamè e la Val Miller con laghi naturali e artificiali frutto di splendide opere idrauliche in sasso della prima metà del '900.",
-  "anticafarmacia_desc": "La Foresteria Antica Farmacia è un luogo raffinato di recente recuperato rispettando l'edificio e la sua storia in omaggio al paese di cui fa parte e di cui è parte importante, nel ricordo dei genitori e dei parenti ora mancati del proprietario e col pensiero a chi gli è più caro."
+  "anticafarmacia_desc": "La Foresteria Antica Farmacia è un luogo raffinato di recente recuperato rispettando l'edificio e la sua storia in omaggio al paese di cui fa parte e di cui è parte importante, nel ricordo dei genitori e dei parenti ora mancati del proprietario e col pensiero a chi gli è più caro.",
+  "anticafarmacia_desc2": "La foresteria Antica Farmacia è un luogo raffinato, che rispetta le origini e la storia della zona di Cedegolo. Concediti un momento di piacere fuori dal caos della città."
 }
