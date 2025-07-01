@@ -27,7 +27,7 @@ export const DiscoverUs = () => {
                 <ul className="mt-50">
                   <li>
                     <FilledBtnLink
-                      to={locations.booking}
+                      to="https://www.bed-and-breakfast.it/it/booking/lombardia/foresteria-antica-farmacia-cedegolo/66833"
                       label={t('Book now')}
                     />
                   </li>

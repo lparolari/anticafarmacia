@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'
 
 import { BorderBtnLink } from '../../components/Button/Button'
 import { useFeats } from '../../hooks/useFeats'
-import { locations } from '../../utils/locations'
 
 const Cta = () => {
   const { t } = useTranslation()
@@ -23,7 +22,7 @@ const Cta = () => {
                 </div>
                 <p className="mb-20">{t('anticafarmacia_desc2')}</p>
                 <BorderBtnLink
-                  to={locations.booking}
+                  to="https://www.bed-and-breakfast.it/it/booking/lombardia/foresteria-antica-farmacia-cedegolo/66833"
                   label={t('Check availability')}
                 />
               </div>

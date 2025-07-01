@@ -294,7 +294,10 @@ const HeaderInfo = () => (
       </a>
     </div>
     <div className="item">
-      <a href={locations.booking} className="main-btn btn-filled">
+      <a
+        href="https://www.bed-and-breakfast.it/it/booking/lombardia/foresteria-antica-farmacia-cedegolo/66833"
+        className="main-btn btn-filled"
+      >
         {i18next.t('Book now')}
       </a>
     </div>

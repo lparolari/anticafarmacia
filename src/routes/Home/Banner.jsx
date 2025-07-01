@@ -6,8 +6,7 @@ import Slider from 'react-slick'
 
 import dinnerRoom1 from '../../assets/images/dinner-room-1.jpg'
 import guesthouseExternalFacade from '../../assets/images/guesthouse-external-facade.jpg'
-import { FilledBtnLink } from '../../components/Button/Button'
-import { locations } from '../../utils/locations'
+import BookingWidget from '../../components/BookingWidget'
 
 const Banner = () => {
   const { t } = useTranslation()
@@ -37,11 +36,6 @@ const Banner = () => {
               <h1 className="title">
                 {t('A unique experience in the Italian Alps')}
               </h1>
-              <ul>
-                <li className="mb-50">
-                  <FilledBtnLink to={locations.booking} label={t('Book now')} />
-                </li>
-              </ul>
             </div>
           </div>
           <div className="col-lg-6 col-md-6">
@@ -54,6 +48,11 @@ const Banner = () => {
                 ))}
               </Slider>
             </div>
+          </div>
+        </div>
+        <div className="row align-items-center">
+          <div className="col-lg-12 pt-50">
+            <BookingWidget />
           </div>
         </div>
       </div>

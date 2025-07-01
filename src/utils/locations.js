@@ -3,5 +3,4 @@ export const locations = {
   rooms: '/rooms',
   room: (id) => `/rooms/${id}`,
   contacts: '/contacts',
-  booking: '/booking',
 }
