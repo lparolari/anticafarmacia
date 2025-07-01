@@ -11,6 +11,8 @@ const BookingWidget = () => {
     numberRooms: 1,
   })
 
+  const [touched, setTouched] = useState({})
+
   const [errors, setErrors] = useState({})
 
   const formatDate = (dateString) => {
@@ -44,6 +46,12 @@ const BookingWidget = () => {
   }, [formData, t])
 
   const handleSubmit = () => {
+    setTouched({
+      checkin: true,
+      checkout: true,
+      numberPeople: true,
+    })
+
     if (validateForm()) {
       const baseUrl =
         'https://www.bed-and-breakfast.it/it/lombardia/foresteria-antica-farmacia-cedegolo/66833'
@@ -84,7 +92,9 @@ const BookingWidget = () => {
             }
           />
         </label>
-        {errors.checkin && <div className="text-danger">{errors.checkin}</div>}
+        {errors.checkin && touched?.checkin && (
+          <div className="text-danger">{errors.checkin}</div>
+        )}
       </div>
       <div className="col-md-3 mb-10">
         <label htmlFor="checkOut" style={{ width: '100%' }}>
@@ -104,7 +114,7 @@ const BookingWidget = () => {
             }
           />
         </label>
-        {errors.checkout && (
+        {errors.checkout && touched?.checkout && (
           <div className="text-danger">{errors.checkout}</div>
         )}
       </div>
@@ -118,13 +128,12 @@ const BookingWidget = () => {
             max="20"
             style={{ backgroundColor: 'white' }}
             value={formData.numberPeople}
-            // readOnly
             onChange={(e) =>
               setFormData({ ...formData, numberPeople: e.target.value })
             }
           />
         </label>
-        {errors.numberPeople && (
+        {errors.numberPeople && touched?.numberPeople && (
           <div className="text-danger">{errors.numberPeople}</div>
         )}
       </div>
