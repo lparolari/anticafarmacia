@@ -58,12 +58,12 @@ export const Header = ({
       linkText: t('Home'),
       child: false,
     },
-    // {
-    //   id: 2,
-    //   link: locations.rooms,
-    //   linkText: t('Rooms'),
-    //   child: false,
-    // },
+    {
+      id: 5,
+      link: locations.activities,
+      linkText: t('Attractions'),
+      child: false,
+    },
     {
       id: 4,
       link: locations.contacts,
@@ -291,14 +291,6 @@ const HeaderInfo = () => (
     <div className="item">
       <a href={locations.contacts} className="main-btn bnt-border">
         {i18next.t('Contact us')}
-      </a>
-    </div>
-    <div className="item">
-      <a
-        href="https://www.bed-and-breakfast.it/it/booking/lombardia/foresteria-antica-farmacia-cedegolo/66833"
-        className="main-btn btn-filled"
-      >
-        {i18next.t('Book now')}
       </a>
     </div>
     <div className="item">

@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import dinnerRoom from '../../assets/images/dinner-room-2.jpg'
-import { BorderBtnLink, FilledBtnLink } from '../../components/Button/Button'
+import { BorderBtnLink } from '../../components/Button/Button'
 import { locations } from '../../utils/locations'
 
 export const DiscoverUs = () => {
@@ -25,12 +25,6 @@ export const DiscoverUs = () => {
                 <span>{t('Dedicate yourself some time')}</span>
                 <h2>{t('home_parallax_cta_title')}</h2>
                 <ul className="mt-50">
-                  <li>
-                    <FilledBtnLink
-                      to="https://www.bed-and-breakfast.it/it/booking/lombardia/foresteria-antica-farmacia-cedegolo/66833"
-                      label={t('Book now')}
-                    />
-                  </li>
                   <li>
                     <BorderBtnLink
                       to={locations.contact}

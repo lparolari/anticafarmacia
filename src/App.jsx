@@ -2,6 +2,7 @@
 
 import { Route, Routes } from 'react-router-dom'
 
+import { Activities } from './routes/Activities/Activities'
 import { Contacts } from './routes/Contacts/Contacts'
 import { Home } from './routes/Home/Home'
 import { NotFound404 } from './routes/NotFound404/NotFound404'
@@ -17,6 +18,7 @@ const App = () => (
       <Route index element={<Rooms />} />
     </Route>
     <Route path={locations.contacts} element={<Contacts />} />
+    <Route path={locations.activities} element={<Activities />} />
     <Route path="*" element={<NotFound404 />} />
   </Routes>
 )
