@@ -59,6 +59,12 @@ export const Header = ({
       child: false,
     },
     {
+      id: 6,
+      link: locations.book,
+      linkText: t('Book'),
+      child: false,
+    },
+    {
       id: 5,
       link: locations.activities,
       linkText: t('Attractions'),

@@ -4,4 +4,5 @@ export const locations = {
   room: (id) => `/rooms/${id}`,
   contacts: '/contacts',
   activities: '/activities',
+  book: '/book',
 }

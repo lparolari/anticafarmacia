@@ -1,7 +1,54 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const BookingWidget = () => {
+const formatDate = (dateString) => {
+  if (!dateString) return ''
+  const date = new Date(dateString)
+  const day = date.getDate().toString().padStart(2, '0')
+  const month = (date.getMonth() + 1).toString().padStart(2, '0')
+  const year = date.getFullYear()
+  return `${day}/${month}/${year}`
+}
+
+const handleBedAndBreakfastSubmit = (formData) => {
+  const baseUrl =
+    'https://www.bed-and-breakfast.it/it/lombardia/foresteria-antica-farmacia-cedegolo/66833'
+  const params = new URLSearchParams()
+
+  params.append('checkin', formatDate(formData.checkin))
+  params.append('checkout', formatDate(formData.checkout))
+  params.append('NumberRooms', formData.numberRooms.toString())
+  params.append('NumberPeople', formData.numberPeople.toString())
+
+  const finalUrl = `${baseUrl}?${params.toString()}`
+
+  window.location.href = finalUrl
+}
+const handleIBookingSubmit = (formData) => {
+  const form = document.createElement('form')
+  form.method = 'POST'
+  form.action =
+    'https://booking.ireservation.it/it/lombardia/foresteria-antica-farmacia-cedegolo/66833'
+  form.target = '_self'
+
+  const appendInput = (name, value) => {
+    const input = document.createElement('input')
+    input.type = 'hidden'
+    input.name = name
+    input.value = value
+    form.appendChild(input)
+  }
+
+  appendInput('checkin', formatDate(formData.checkin))
+  appendInput('checkout', formatDate(formData.checkout))
+  appendInput('NumberRooms', formData.numberRooms.toString())
+  appendInput('NumberPeople', formData.numberPeople.toString())
+
+  document.body.appendChild(form)
+  form.submit()
+}
+
+const BookingWidget = ({ provider = 'ibooking' }) => {
   const { t } = useTranslation()
 
   const [formData, setFormData] = useState({
@@ -14,15 +61,6 @@ const BookingWidget = () => {
   const [touched, setTouched] = useState({})
 
   const [errors, setErrors] = useState({})
-
-  const formatDate = (dateString) => {
-    if (!dateString) return ''
-    const date = new Date(dateString)
-    const day = date.getDate().toString().padStart(2, '0')
-    const month = (date.getMonth() + 1).toString().padStart(2, '0')
-    const year = date.getFullYear()
-    return `${day}/${month}/${year}`
-  }
 
   const validateForm = useCallback(() => {
     const newErrors = {}
@@ -53,18 +91,17 @@ const BookingWidget = () => {
     })
 
     if (validateForm()) {
-      const baseUrl =
-        'https://www.bed-and-breakfast.it/it/lombardia/foresteria-antica-farmacia-cedegolo/66833'
-      const params = new URLSearchParams()
-
-      params.append('checkin', formatDate(formData.checkin))
-      params.append('checkout', formatDate(formData.checkout))
-      params.append('NumberRooms', formData.numberRooms.toString())
-      params.append('NumberPeople', formData.numberPeople.toString())
-
-      const finalUrl = `${baseUrl}?${params.toString()}`
-
-      window.location.href = finalUrl
+      if (provider === 'bed-and-breakfast') {
+        handleBedAndBreakfastSubmit(formData)
+      } else if (provider === 'ibooking') {
+        handleIBookingSubmit(formData)
+      } else {
+        setErrors({
+          provider: t(
+            'Could not contact reservation website, please try again later.'
+          ),
+        })
+      }
     }
   }
 
@@ -151,6 +188,13 @@ const BookingWidget = () => {
           </button>
         </label>
       </div>
+      {errors.provider && (
+        <div className="col-md-12">
+          <p>
+            <div className="text-danger">{errors.provider}</div>
+          </p>
+        </div>
+      )}
     </div>
   )
 }

@@ -3,6 +3,7 @@
 import { Route, Routes } from 'react-router-dom'
 
 import { Activities } from './routes/Activities/Activities'
+import { Book } from './routes/Book/Book'
 import { Contacts } from './routes/Contacts/Contacts'
 import { Home } from './routes/Home/Home'
 import { NotFound404 } from './routes/NotFound404/NotFound404'
@@ -19,6 +20,7 @@ const App = () => (
     </Route>
     <Route path={locations.contacts} element={<Contacts />} />
     <Route path={locations.activities} element={<Activities />} />
+    <Route path={locations.book} element={<Book />} />
     <Route path="*" element={<NotFound404 />} />
   </Routes>
 )
